@@ -4,7 +4,7 @@
 <%= @myairports.each do |airport| %>
  <h1>
   <% newairport = Airport.new %>
-  <% newairport.code = airport %>
+  <% newairport.code = airport[:code] %>
   <%= newairport.code %>
 </h1>
 
