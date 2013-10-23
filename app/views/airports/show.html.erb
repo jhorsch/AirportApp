@@ -1,0 +1,21 @@
+
+
+
+<%= @myairports.each do |airport| %>
+ <h1>
+  <% newairport = Airport.new %>
+  <% newairport.code = airport %>
+  <%= newairport.code %>
+</h1>
+
+
+  <p>
+    <%= newairport.temperature %>
+  </p>
+  <p>
+    <%= newairport.delay %>
+  </p>
+
+<% end %>
+
+
