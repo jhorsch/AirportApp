@@ -1,17 +1,18 @@
 
 
 
-<%= @myairports.each do |airport| %>
+<% @myairports.each do |airport| %>
  <h1>
   <% newairport = Airport.new %>
   <% newairport.code = airport[:code] %>
-  <%= newairport.code %>
-</h1>
+  <%= link_to "#{newairport.code}", xxx_url(airport[:id]) %>
 
+</h1>
 
   <p>
     <%= newairport.temperature %>
   </p>
+
   <p>
     <%= newairport.delay %>
   </p>

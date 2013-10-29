@@ -6,7 +6,16 @@ class AirportsController < ApplicationController
 
 #airport codes set as an instance variable in my controller
 def show
-@myairports = my_airports
+  @myairports = my_airports
+  @pageid = my_airports[params[:userid].to_i]
+
+end
+
+def details
+    @myairports = my_airports
+     @pageid = my_airports[params[:userid].to_i]
+
+   @myid = params[:userid].to_i]
 end
 
 
